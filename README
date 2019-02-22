@@ -1,0 +1,10 @@
+export SPARK_MAJOR_VERSION=2
+
+spark-submit \
+--master yarn \
+--deploy-mode client \
+--class com.num3rd.spark.streaming.DirectKafkaWordCount \
+spark2-demo-1.0-SNAPSHOT.jar \
+brokers:port \
+groupId \
+topic
